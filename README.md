@@ -49,7 +49,7 @@ ext install Foshati.git-opener
 
 ### 🛠 Manual Installation
 
-For **Cursor**, **Windsurf**, **VSCodium**, or offline installation:
+For **Cursor**, **Windsurf**, **Antigravity**, **VSCodium**, or offline installation:
 
 1. Download the `.vsix` file from [Releases](https://github.com/Foshati/git-opener/releases)
 
@@ -60,6 +60,9 @@ code --install-extension git-opener-1.1.3.vsix --force
 
 # Cursor
 cursor --install-extension git-opener-1.1.3.vsix --force
+
+# Antigravity
+antigravity --install-extension git-opener-1.1.3.vsix --force
 
 # VSCodium
 codium --install-extension git-opener-1.1.3.vsix --force
