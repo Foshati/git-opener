@@ -1,0 +1,109 @@
+{
+  "publisher": "Foshati",
+  "name": "git-open",
+  "displayName": "Git Open",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.22.0",
+  "description": "Open any Git repository in browser - GitHub, GitLab, Gitea, Bitbucket & more",
+  "author": "Foshati",
+  "license": "MIT",
+  "homepage": "https://github.com/Foshati/git-open#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Foshati/git-open"
+  },
+  "bugs": {
+    "url": "https://github.com/Foshati/git-open/issues"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "gitlab",
+    "gitea",
+    "bitbucket",
+    "codeberg",
+    "repository",
+    "open",
+    "browser",
+    "remote",
+    "web"
+  ],
+  "categories": [
+    "Other",
+    "SCM Providers"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-open.openRepo",
+        "title": "Git Open: Open Repository in Browser"
+      },
+      {
+        "command": "git-open.openFile",
+        "title": "Git Open: Open Current File in Browser"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Git Open",
+      "properties": {
+        "git-open.statusBar.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show Git Open button in status bar"
+        },
+        "git-open.statusBar.alignment": {
+          "type": "string",
+          "enum": ["left", "right"],
+          "default": "left",
+          "description": "Status bar button alignment"
+        },
+        "git-open.statusBar.priority": {
+          "type": "number",
+          "default": 0,
+          "description": "Status bar button priority (higher = more left)"
+        },
+        "git-open.preferHttps": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use HTTPS instead of HTTP for URLs"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
+    "@antfu/ni": "^27.0.1",
+    "@types/node": "^20.19.25",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.7.0",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.39.1",
+    "esno": "^4.8.0",
+    "pnpm": "^10.22.0",
+    "rimraf": "^6.1.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.9"
+  }
+}
