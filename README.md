@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./res/icon.png" height="128"/>
+  <img src="./public/icon.png" height="128"/>
 </p>
 
 <h1 align="center">Git Opener</h1>
@@ -58,8 +58,8 @@ Click the **orange link icon** ↗️ in the status bar to open the repository i
 
 | Command | Windows/Linux | macOS |
 |---------|---------------|-------|
-| Open Repository | `Ctrl+Shift+G O` | `Cmd+Shift+G O` |
-| Open File | `Ctrl+Shift+G F` | `Cmd+Shift+G F` |
+| Open Repository | `Ctrl+Alt+G` | `Ctrl+Cmd+G` |
+| Open File | `Ctrl+Alt+F` | `Ctrl+Cmd+F` |
 
 ## ⚙️ Configuration
 
@@ -83,7 +83,7 @@ Click the **orange link icon** ↗️ in the status bar to open the repository i
 
 ## 📸 Demo
 
-![Git Open Demo](./res/demo.png)
+![Git Open Demo](./public/demo.png)
 
 ## 🤝 Contributing
 
