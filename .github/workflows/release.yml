@@ -12,14 +12,50 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+          cache: pnpm
 
-      - run: npx changelogithub
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build VSIX
+        run: npx vsce package --no-dependencies
+
+      - name: Get version from tag
+        id: version
+        run: echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            git-opener-${{ steps.version.outputs.version }}.vsix
+          body: |
+            ## 🛠 Manual Installation
+
+            Download `git-opener-${{ steps.version.outputs.version }}.vsix` and run:
+
+            ```bash
+            # VS Code
+            code --install-extension git-opener-${{ steps.version.outputs.version }}.vsix --force
+
+            # Cursor
+            cursor --install-extension git-opener-${{ steps.version.outputs.version }}.vsix --force
+
+            # Antigravity
+            antigravity --install-extension git-opener-${{ steps.version.outputs.version }}.vsix --force
+            ```
+
+            Or drag the `.vsix` file into the Extensions view.
+          generate_release_notes: true
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
