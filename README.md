@@ -15,7 +15,7 @@
   <a href="https://marketplace.visualstudio.com/items?itemName=Foshati.git-opener">
     <img src="https://img.shields.io/visual-studio-marketplace/d/Foshati.git-opener.svg?color=green" alt="Downloads"/>
   </a>
-  <a href="https://github.com/Foshati/git-open/blob/main/LICENSE">
+  <a href="https://github.com/Foshati/git-opener/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-orange.svg" alt="License"/>
   </a>
 </p>

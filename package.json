@@ -7,13 +7,13 @@
   "description": "Open any Git repository in browser - GitHub, GitLab, Gitea, Bitbucket & more",
   "author": "Foshati",
   "license": "MIT",
-  "homepage": "https://github.com/Foshati/git-open#readme",
+  "homepage": "https://github.com/Foshati/git-opener#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foshati/git-open"
+    "url": "https://github.com/Foshati/git-opener"
   },
   "bugs": {
-    "url": "https://github.com/Foshati/git-open/issues"
+    "url": "https://github.com/Foshati/git-opener/issues"
   },
   "keywords": [
     "git",
