@@ -2,12 +2,25 @@
 
 All notable changes to the "Git Opener" extension will be documented in this file.
 
+## [1.1.4] - 2025-12-20
+
+### Added
+- 🚀 Automatic publishing to VS Code Marketplace and Open VSX
+- 📦 GitHub Releases with downloadable VSIX files
+
+### Changed
+- ⚙️ Improved CI/CD pipeline with full automation
+
 ## [1.1.3] - 2025-12-20
 
 ### Fixed
-- ⌨️ Updated keyboard shortcuts to match command names:
-  - `Ctrl+Alt+G` / `Ctrl+Cmd+G` → Open **G**it Repository
-  - `Ctrl+Alt+F` / `Ctrl+Cmd+F` → Open **F**ile in Browser
+- ⌨️ Keyboard shortcuts updated:
+  - `Ctrl+Alt+G` / `Ctrl+Cmd+G` → Open Repository
+  - `Ctrl+Alt+F` / `Ctrl+Cmd+F` → Open File
+
+### Changed
+- 📁 Project restructured (src/types/, public/)
+- 📖 Added manual installation instructions
 
 ## [1.1.2] - 2025-12-20
 
