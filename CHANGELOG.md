@@ -2,6 +2,13 @@
 
 All notable changes to the "Git Opener" extension will be documented in this file.
 
+## [1.1.5] - 2025-12-20
+
+### Fixed
+- ⌨️ **Keyboard shortcuts now work everywhere** (removed `editorTextFocus` restriction)
+  - Previously only worked when editor was focused
+  - Now works in sidebar, explorer, terminal, etc.
+
 ## [1.1.4] - 2025-12-20
 
 ### Added
