@@ -1,4 +1,4 @@
-import type { GitExtension, Repository } from '../types/vscode.git'
+import type { GitExtension, Repository } from './types/vscode.git'
 import { commands, env, extensions, StatusBarAlignment, Uri, window, workspace } from 'vscode'
 import { convertSshToHttp } from './utils'
 
@@ -182,8 +182,9 @@ export function activate() {
   if (isStatusBarEnabled()) {
     const statusBar = window.createStatusBarItem(getAlignment(), getPriority())
     statusBar.command = 'git-open.openRepo'
-    statusBar.text = '$(git-branch)'
-    statusBar.tooltip = 'Git Open: Open repository in browser'
+    statusBar.text = '$(link-external)'
+    statusBar.color = '#F96C4B'
+    statusBar.tooltip = 'Git Opener: Open repository in browser'
     statusBar.show()
   }
 }

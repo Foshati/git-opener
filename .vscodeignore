@@ -1,25 +1,16 @@
-# Source files (only dist is needed)
-src/
-types/
-test/
-
-# Development files
-node_modules/
-.github/
 .vscode/
-.gemini/
-
-# Config files (not needed in extension)
-*.tgz
-*.log
-.npmrc
-.node-version
+node_modules/
+*.vsix
+.DS_Store
+.git/
+.gitignore
+.gitattributes
 pnpm-lock.yaml
 pnpm-workspace.yaml
+.npmrc
+.node-version
+test/
+src/
 tsconfig.json
 tsup.config.ts
 eslint.config.js
-
-# Git
-.git/
-.gitignore
