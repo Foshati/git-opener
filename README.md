@@ -2,18 +2,18 @@
   <img src="./res/icon.png" height="128"/>
 </p>
 
-<h1 align="center">Git Open</h1>
+<h1 align="center">Git Opener</h1>
 
 <p align="center">
   <strong>Open any Git repository in browser with one click</strong>
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=Foshati.git-open">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/Foshati.git-open.svg?color=blue&label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="VS Code Marketplace"/>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Foshati.git-opener">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/Foshati.git-opener.svg?color=blue&label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="VS Code Marketplace"/>
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Foshati.git-open">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/Foshati.git-open.svg?color=green" alt="Downloads"/>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Foshati.git-opener">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/Foshati.git-opener.svg?color=green" alt="Downloads"/>
   </a>
   <a href="https://github.com/Foshati/git-open/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-orange.svg" alt="License"/>

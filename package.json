@@ -1,7 +1,7 @@
 {
   "publisher": "Foshati",
-  "name": "git-open",
-  "displayName": "Git Open",
+  "name": "git-opener",
+  "displayName": "Git Opener",
   "version": "1.0.0",
   "packageManager": "pnpm@10.22.0",
   "description": "Open any Git repository in browser - GitHub, GitLab, Gitea, Bitbucket & more",
