@@ -56,9 +56,10 @@ jobs:
             # Antigravity
             antigravity --install-extension git-opener-${{ steps.version.outputs.version }}.vsix --force
             ```
-
-            Or drag the `.vsix` file into the Extensions view.
           generate_release_notes: true
+
+      - name: Publish to VS Code Marketplace
+        run: npx vsce publish --no-dependencies -p ${{ secrets.VSCE_PAT }}
 
       - name: Publish to Open VSX
         run: npx ovsx publish git-opener-${{ steps.version.outputs.version }}.vsix -p ${{ secrets.OPEN_VSX_TOKEN }}
