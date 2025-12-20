@@ -42,26 +42,24 @@
 
 Or install via command palette:
 ```
-ext install fa.git-open
+ext install Foshati.git-opener
 ```
 
 ## 🚀 Usage
 
 ### Status Bar
-Click the **Git branch icon** in the status bar to open the repository in your browser.
+Click the **orange link icon** ↗️ in the status bar to open the repository in your browser.
 
 ### Command Palette
 - `Git Open: Open Repository in Browser` - Opens the repository
 - `Git Open: Open Current File in Browser` - Opens current file with line number
 
-### Keyboard Shortcuts
-You can add custom keybindings in `keybindings.json`:
-```json
-{
-  "key": "ctrl+shift+g o",
-  "command": "git-open.openRepo"
-}
-```
+### ⌨️ Keyboard Shortcuts
+
+| Command | Windows/Linux | macOS |
+|---------|---------------|-------|
+| Open Repository | `Ctrl+Shift+G O` | `Cmd+Shift+G O` |
+| Open File | `Ctrl+Shift+G F` | `Cmd+Shift+G F` |
 
 ## ⚙️ Configuration
 

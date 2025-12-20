@@ -1,4 +1,4 @@
-import type { GitExtension, Repository } from '../types/vscode.git'
+import type { GitExtension, Repository } from './types/vscode.git'
 import { commands, env, extensions, StatusBarAlignment, Uri, window, workspace } from 'vscode'
 import { convertSshToHttp } from './utils'
 
