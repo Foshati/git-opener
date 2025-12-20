@@ -35,15 +35,37 @@
 
 ## 📦 Installation
 
+### From Marketplace (Recommended)
+
 1. Open **VS Code**
 2. Go to **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Search for **"Git Open"**
+3. Search for **"Git Opener"**
 4. Click **Install**
 
-Or install via command palette:
-```
+Or install via command:
+```bash
 ext install Foshati.git-opener
 ```
+
+### 🛠 Manual Installation
+
+For **Cursor**, **Windsurf**, **VSCodium**, or offline installation:
+
+1. Download the `.vsix` file from [Releases](https://github.com/Foshati/git-opener/releases)
+
+2. Install via terminal:
+```bash
+# VS Code
+code --install-extension git-opener-1.1.3.vsix --force
+
+# Cursor
+cursor --install-extension git-opener-1.1.3.vsix --force
+
+# VSCodium
+codium --install-extension git-opener-1.1.3.vsix --force
+```
+
+3. Or drag the `.vsix` file into the Extensions view
 
 ## 🚀 Usage
 
@@ -91,7 +113,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-[MIT](./LICENSE) License © 2024
+[MIT](./LICENSE) License © 2024 Foshati
 
 ---
 
