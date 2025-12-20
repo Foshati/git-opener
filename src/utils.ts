@@ -67,20 +67,27 @@ export function convertSshToHttp(sshUrl: string, useHttps: boolean = true): stri
 
 /**
  * Detect Git platform from URL
- * 
+ *
  * @param url - Git remote URL
  * @returns Platform name or 'unknown'
  */
 export function detectPlatform(url: string): string {
   const lowerUrl = url.toLowerCase()
-  
-  if (lowerUrl.includes('github.com')) return 'github'
-  if (lowerUrl.includes('gitlab.com') || lowerUrl.includes('gitlab')) return 'gitlab'
-  if (lowerUrl.includes('bitbucket.org') || lowerUrl.includes('bitbucket')) return 'bitbucket'
-  if (lowerUrl.includes('gitea') || lowerUrl.includes('forgejo')) return 'gitea'
-  if (lowerUrl.includes('codeberg.org')) return 'codeberg'
-  if (lowerUrl.includes('sr.ht') || lowerUrl.includes('sourcehut')) return 'sourcehut'
-  if (lowerUrl.includes('azure.com') || lowerUrl.includes('visualstudio.com')) return 'azure'
-  
+
+  if (lowerUrl.includes('github.com'))
+    return 'github'
+  if (lowerUrl.includes('gitlab.com') || lowerUrl.includes('gitlab'))
+    return 'gitlab'
+  if (lowerUrl.includes('bitbucket.org') || lowerUrl.includes('bitbucket'))
+    return 'bitbucket'
+  if (lowerUrl.includes('gitea') || lowerUrl.includes('forgejo'))
+    return 'gitea'
+  if (lowerUrl.includes('codeberg.org'))
+    return 'codeberg'
+  if (lowerUrl.includes('sr.ht') || lowerUrl.includes('sourcehut'))
+    return 'sourcehut'
+  if (lowerUrl.includes('azure.com') || lowerUrl.includes('visualstudio.com'))
+    return 'azure'
+
   return 'unknown'
 }
