@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -37,6 +38,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          token: ${{ secrets.PAT_TOKEN }}
           files: |
             git-opener-${{ steps.version.outputs.version }}.vsix
           body: |
@@ -57,5 +59,6 @@ jobs:
 
             Or drag the `.vsix` file into the Extensions view.
           generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to Open VSX
+        run: npx ovsx publish git-opener-${{ steps.version.outputs.version }}.vsix -p ${{ secrets.OPEN_VSX_TOKEN }}
